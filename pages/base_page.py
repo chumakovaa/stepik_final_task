@@ -17,9 +17,6 @@ class BasePage():
             return False
         return True
 
-    def compare_text(self, first_el, sec_el):
-        return first_el == sec_el
-
     def solve_quiz_and_get_code(self):
         from math import log, sin
         alert = self.browser.switch_to.alert

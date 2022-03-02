@@ -8,16 +8,21 @@ def pytest_addoption(parser):
                      help="Choose browser: chrome or firefox")
     parser.addoption('--language', action='store', default='en',
                      help="Choose language")
+    parser.addoption('--headless', action='store', default='false',
+                     help="Open a browser invisible, without GUI is used by default")
 
 
 @pytest.fixture(scope="function")
 def browser(request):
     language = request.config.getoption('language')
     browser_name = request.config.getoption("browser_name")
+    headless = request.config.getoption('headless')
     browser = None
     if browser_name == "chrome":
         options = Options()
         options.add_experimental_option('prefs', {'intl.accept_languages': language})
+        if headless == 'true':
+            options.add_argument('headless')
         browser = webdriver.Chrome(options=options)
     elif browser_name == "firefox":
         fp = webdriver.FirefoxProfile()

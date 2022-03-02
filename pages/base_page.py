@@ -1,5 +1,5 @@
 from selenium.common.exceptions import NoSuchElementException
-
+from selenium.common.exceptions import NoAlertPresentException
 
 class BasePage():
     def __init__(self, browser, url, timeout=10):
@@ -16,6 +16,9 @@ class BasePage():
         except NoSuchElementException:
             return False
         return True
+
+    def compare_text(self, first_el, sec_el):
+        return first_el == sec_el
 
     def solve_quiz_and_get_code(self):
         from math import log, sin

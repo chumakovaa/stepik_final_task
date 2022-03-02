@@ -8,6 +8,6 @@ def test_guest_can_add_product_to_basket(browser):
     product_page.open()
     product_page.add_to_basket()
     product_page.solve_quiz_and_get_code()
-    product_page.compare_name()
-    product_page.compare_price()
+    product_page.compare_book_price()
+    product_page.compare_book_name()
 

@@ -8,3 +8,5 @@ The final task from "Автоматизация тестирования с по
 pytest -v --tb=line --language=en test_main_page.py
 
 pytest -v --tb=line --language=en -m need_review test_product_page.py
+
+Если при проверке шага 3 возвращает 1 failed, попробуй прогнать тесты еще раз. Я не знаю почему тесты падают при первом прогоне, я столкнулась с этим, проверяя работы других.  

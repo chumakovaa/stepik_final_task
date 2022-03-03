@@ -5,4 +5,5 @@ The final task from "Автоматизация тестирования с по
 
 Для запуска тестов:
 pytest -v --tb=line --language=en -m need_review test_main_page.py
+
 pytest -v --tb=line --language=en -m need_review test_product_page.py

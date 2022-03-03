@@ -1,8 +1,8 @@
 # stepik_final_task
 The final task from "Автоматизация тестирования с помощью Selenium и Python" course
 
-Структура проекта:
-base_page.py - расположены все методы которые относятся ко всему проекту
-locators.py - тут мы храним локаторы, в виде констант
-main_page.py - тут мы храним методы по конкретной странице
-test_main_page.py - тут мы храним сами тест-кейсы, которые будем запускать с помощью pytest
+Если не хочешь, что при прогоне тестов появлялось окно браузера, укажи в терминале --headless=true
+
+Для запуска тестов:
+pytest -v --tb=line --language=en -m need_review test_main_page.py
+pytest -v --tb=line --language=en -m need_review test_product_page.py

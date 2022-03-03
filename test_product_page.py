@@ -72,7 +72,7 @@ class TestUserAddToBasketFromProductPage():
     def setup(self, browser):
         f = faker.Faker()
         email = f.email()
-        password = f.company()
+        password = f'{f.company()}1jhf'
         login_page = LoginPage(browser, login_link)
         login_page.open()
         login_page.register_new_user(email, password)

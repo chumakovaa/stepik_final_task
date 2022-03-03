@@ -18,3 +18,9 @@ class ProductPageLocators():
 class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    GO_TO_BASKET_BUTTON = (By.CSS_SELECTOR, '.btn-group a.btn')
+
+
+class BasketPageLocators():
+    GO_TO_SHOPPING_LINK = (By.CSS_SELECTOR, 'a[href="/en-gb/"]')
+    ITEM_IN_THE_BASKET = (By.CSS_SELECTOR, '.basket-items')

@@ -22,5 +22,6 @@ class BasePageLocators():
 
 
 class BasketPageLocators():
-    GO_TO_SHOPPING_LINK = (By.CSS_SELECTOR, 'a[href="/en-gb/"]')
+    GO_TO_SHOPPING_LINK = (By.CSS_SELECTOR, '#content_inner a')
     ITEM_IN_THE_BASKET = (By.CSS_SELECTOR, '.basket-items')
+    SELECTED_LANGUAGE = (By.CSS_SELECTOR, 'option[selected="selected"]')
